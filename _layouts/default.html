@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="./css/sticky-footer.css" rel="stylesheet">
+    <link href="{{site.url}}{{site.baseurl}}/css/sticky-footer.css" rel="stylesheet">
   </head>
 
   <body>
@@ -44,7 +44,7 @@
                 <div id="collapse{{forloop.index}}" class="collapse show" aria-labelledby="heading{{forloop.index}}" data-parent="#accordion">
                     <div class="card-body">
                       {% for item in group.items %}
-                        <a href="{{item.url}}">{{item.title}}</a>
+                        <a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></br>
                       {%endfor%}
                     </div>
                   </div> 
